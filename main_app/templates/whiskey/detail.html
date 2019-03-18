@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Whiskey Details</h1>
+<div class="card darken-1">
+    <div class="card-content">
+        <span class="card-title">{{whiskey.name}}</span>
+        <p>Brand: {{ whiskey.brand }}</p>
+        <p>Description: {{ whiskey.description }}</p>
+        <p>Origin: {{ whiskey.origin }}</p>
+        <p>Year: {{ whiskey.year }}</p>
+    </div>
+    <div class="card-action">
+        <a href="{% url 'whiskey_update' whiskey.id %}">Edit</a>
+        <a href="{% url 'whiskey_delete' whiskey.id %}">Delete</a>
+      </div>
+</div>
+
+<div class="col s6">
+    <form action="{% url 'add_tasting' whiskey.id %}" method="POST">
+          {% csrf_token %}
+          {{ tasting_form.as_p }}
+          <input type="submit" class="btn" value="Add Tasting">
+        </form>
+        <br>
+        {% if whiskey.drank %}
+          <div class="card-panel center-align">You drank this!</div>
+        {% else %}
+          <div class="card-panel red-text center-align">You've never tried this  whiskey!</div>
+        {% endif %}
+        <table class="striped">
+          <thead>
+            <tr><th>Date</th><th>Tasting</th></tr>
+          </thead>
+          <tbody>
+            {% for tasting in whiskey.tasting_set.all %}
+              <tr>
+                <td>{{tasting.date}}</td>
+                <td>{{tasting.get_tasting_display}}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+<script>
+  var dateEl = document.getElementById('id_date');
+  M.Datepicker.init(dateEl, {
+    format: 'yyyy-mm-dd',
+    defaultDate: new Date(),
+    setDefaultDate: true,
+    autoClose: true
+  });
+
+
+  var selectEl = document.getElementById('id_rating');
+  M.FormSelect.init(selectEl);
+</script>
+
+{% endblock %}

@@ -1,0 +1,146 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  color: black;
+  background-color: white;
+  font-family: 'Crimson Text', serif;
+  width: 100%;
+}
+
+table {
+  background-color: rgba(255, 255, 255, .8);
+}
+
+label, table, p {
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  font-size: 13px;
+}
+  
+main {
+  flex: 1 0 auto;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, .87);
+  color: black;
+}
+
+.datepicker-date-display {
+  background-color: #b9a36c;
+  color: #fff;
+  font-weight: 500;
+}
+
+.datepicker-table td.is-selected {
+  background-color: #d5c6a1;
+  color: #fff;
+}
+
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done, .datepicker-table td.is-today {
+  color: #b9a36c;
+}
+
+button:focus {
+  background-color: #d5c6a1;
+}
+
+span, h1, h2, h3, ul, nav {
+  color: black;
+  text-align: center;
+}
+  
+footer.page-footer {
+  padding-top: 0;
+  text-align: right;
+  background-color: rgba(255, 255, 255, .8);
+  font-family: 'Crimson Text', serif;
+}
+
+nav .brand-logo.left, nav .brand-logo.right, nav ul a, a {
+  color: black;
+}
+
+nav .brand-logo {
+  padding: 0 1em;
+}
+
+a:hover {
+  color: #b9a36c; 
+}
+
+.card {
+  background-color: rgba(255,	255,	255, .8);
+  border: 1px solid black;
+}
+
+.whiskey-text {
+  color: #b9a36c;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+}
+
+.about-container {
+  background-image: url("https://media.timeout.com/images/103438143/image.jpg");
+  background-size: cover; 
+  position: relative; 
+  height: 20em;
+  background-size: cover;
+  background-position: center;
+}
+
+.home {
+  background-color: black;
+}
+
+.welcome {
+  color: #b9a36c;
+}
+
+.home-img {
+  margin: 0 auto;
+}
+
+.about-heading {
+  background-color: rgba(255,	255,	255, 1);
+  padding: .2em;
+  color: black;
+  font-weight: 800;
+  margin: 0 auto; /* Center the text container */
+  position: absolute; /* Position text */
+  top: 50%; /* Position text in the middle */
+  left: 50%; /* Position text in the middle */
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+.btn, .btn-large, .btn-small {
+  text-decoration: none;
+  color: #000;
+  background-color: #FFF;
+  border-radius: 0px;
+  border: 1px solid black;
+  text-transform: uppercase;
+  font-family: 'Crimson Text', serif;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+  background-color: #d5c6a1;
+  color: #fff; 
+}
+
+.form-container {
+  background-image: url("https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F56290200%2F204247721482%2F1%2Foriginal.20190205-171832?w=1000&auto=compress&rect=0%2C78%2C2048%2C1024&s=d3613a8a927a9ac08493cd1abf05255d");
+  background-size: cover; 
+  position: relative; 
+  height: 22em;
+  background-size: cover;
+  background-position: center;
+}
+
+
