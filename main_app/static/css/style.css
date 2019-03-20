@@ -21,6 +21,8 @@ label, table, p {
   
 main {
   flex: 1 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 nav {
@@ -96,7 +98,14 @@ a:hover {
 
 .home {
   background-color: black;
-  background-image: url("https://house.suntory.com/img/data/mh4-new.png")
+  background-image: url("https://house.suntory.com/img/data/mh4-new.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.index {
+  background-color: rgb(51, 51, 51);
 }
 
 .welcome {

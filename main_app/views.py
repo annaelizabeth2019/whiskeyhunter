@@ -25,7 +25,7 @@ def about(request):
 
 def whiskey_index(request):
   whiskey = Whiskey.objects.all()
-  return render(request, 'whiskey/index.html', { 'whiskey': whiskey })
+  return render(request, 'whiskey/index.html', { 'whiskey': whiskey, 'bodyclass' : "index" })
 
 def whiskey_detail(request, whiskey_id):
   whiskey = Whiskey.objects.get(id=whiskey_id)
