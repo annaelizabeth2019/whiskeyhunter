@@ -14,7 +14,15 @@ class Whiskey(models.Model):
   brand = models.CharField(max_length=100)
   description = models.TextField(max_length=250)
   origin = models.TextField(max_length=100)
-  # flavors = models.ManyToManyField(Flavor)
+  SKU = models.TextField(max_length=100)
+  type_of = models.TextField(max_length=100)
+  bottle_size = models.TextField(max_length=100)
+  image = models.TextField()
+  ABV = models.FloatField(max_length=5)
+  maturing = models.TextField(max_length=100)
+  post_treatment = models.TextField(max_length=200)
+
+
 
   def __str__(self):
     return self.name

@@ -148,9 +148,9 @@ a:hover {
   background-image: url("https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F56290200%2F204247721482%2F1%2Foriginal.20190205-171832?w=1000&auto=compress&rect=0%2C78%2C2048%2C1024&s=d3613a8a927a9ac08493cd1abf05255d");
   background-size: cover; 
   position: relative; 
-  height: 22em;
   background-size: cover;
   background-position: center;
+  width:800px;
 }
 
 
