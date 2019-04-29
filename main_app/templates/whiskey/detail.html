@@ -23,20 +23,20 @@
           <input type="submit" class="btn" value="Add Tasting">
         </form>
         <br>
-        {% if whiskey.drank %}
-          <div class="card-panel center-align">You drank this!</div>
+        {% if whiskey.tasting_set %}
+          <div class="center-align"><h5>Your past tastings:</h5></div>
         {% else %}
           <div class="card-panel red-text center-align">You've never tried this  whiskey!</div>
         {% endif %}
         <table class="striped">
           <thead>
-            <tr><th>Date</th><th>Tasting</th></tr>
+            <tr><th>Date</th><th>Rating</th></tr>
           </thead>
-          <tbody>
+          <tbody> 
             {% for tasting in whiskey.tasting_set.all %}
-              <tr>
+              <tr> 
                 <td>{{tasting.date}}</td>
-                <td>{{tasting.get_tasting_display}}</td>
+                <td>{{tasting.get_rating_display}}</td>
               </tr>
             {% endfor %}
           </tbody>

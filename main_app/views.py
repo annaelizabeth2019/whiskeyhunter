@@ -29,6 +29,7 @@ def whiskey_index(request):
 
 def whiskey_detail(request, whiskey_id):
   whiskey = Whiskey.objects.get(id=whiskey_id)
+  print(Whiskey.objects.get(id=whiskey_id))
   tasting_form = TastingForm()
   return render(request, 'whiskey/detail.html', {
     'whiskey': whiskey, 'tasting_form': tasting_form
