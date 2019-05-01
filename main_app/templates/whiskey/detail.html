@@ -8,7 +8,12 @@
         <p>Brand: {{ whiskey.brand }}</p>
         <p>Description: {{ whiskey.description }}</p>
         <p>Origin: {{ whiskey.origin }}</p>
+        <p>Type: {{ whiskey.type_of }}</p>
         <p>Year: {{ whiskey.year }}</p>
+        <p>SKU: {{ whiskey.SKU }}</p>
+        <p>ABV: {{ whiskey.ABV }}</p>
+        <p>Maturing: {{ whiskey.maturing }}</p>
+        <p>Post Treatment: {{ whiskey.post_treatment }}</p>
     </div>
     <div class="card-action">
         <a href="{% url 'whiskey_update' whiskey.id %}">Edit</a>

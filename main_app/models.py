@@ -11,16 +11,16 @@ RATING = (
 
 class Whiskey(models.Model):
   name = models.CharField(max_length=200)
-  brand = models.CharField(max_length=100)
-  description = models.TextField(max_length=250)
-  origin = models.TextField(max_length=100)
-  SKU = models.TextField(max_length=100)
-  type_of = models.TextField(max_length=100)
-  bottle_size = models.TextField(max_length=100)
-  image = models.TextField()
-  ABV = models.FloatField(max_length=5)
-  maturing = models.TextField(max_length=100)
-  post_treatment = models.TextField(max_length=200)
+  brand = models.CharField(max_length=10)
+  description = models.TextField(max_length=250, blank=True)
+  origin = models.TextField(max_length=100, blank=True)
+  SKU = models.TextField(max_length=100, blank=True, unique=True)
+  type_of = models.TextField(max_length=100, blank=True)
+  bottle_size = models.TextField(max_length=100, blank=True)
+  image = models.TextField(blank=True)
+  ABV = models.FloatField(max_length=5, blank=True, null=True)
+  maturing = models.TextField(max_length=100, blank=True)
+  post_treatment = models.TextField(max_length=200, blank=True)
 
 
 
